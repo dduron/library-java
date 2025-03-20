@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "ebb03b4c-7b7b-44b8-8c66-0dd87a0e47b9",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42348252"
+	},
+	"item": [
+		{
+			"name": "findAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOneBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/67be3bc84f0bc4f6a63ace3b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"67be3bc84f0bc4f6a63ace3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Nest.js: A Progressive Node.js Framework (English Edition)\",\r\n  \"genre\": \"Web Development\",\r\n  \"description\": \"JavaScript frameworks go in and out of style very quickly as web technologies change and grow. Nest.js is a good starting point for many developers that are looking to use a modern web framework because it uses a language that is very similar to that of the most used language on the web to this day, JavaScript...\",\r\n  \"author\": \"Jay Bell\",\r\n  \"pages\": 350,\r\n  \"image_url\": \"https://m.media-amazon.com/images/I/41fveBeDWmL._SY346_.jpg\",\r\n  \"keywords\": [\r\n    \"NestJS\",\r\n    \"REST API\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":\"67c8bf4f784013527700186d\",\r\n  \"title\": \"Nest.js: A Progressive Node.js Framework (English Edition)\",\r\n  \"genre\": \"Web Development\",\r\n  \"description\": \"JavaScript frameworks go in and out of style very quickly as web technologies change and grow. Nest.js is a good starting point for many developers that are looking to use a modern web framework because it uses a language that is very similar to that of the most used language on the web to this day, JavaScript...\",\r\n  \"author\": \"Jay Bell\",\r\n  \"pages\": 351,\r\n  \"image_url\": \"https://m.media-amazon.com/images/I/41fveBeDWmL._SY346_.jpg\",\r\n  \"keywords\": [\r\n    \"NestJS\",\r\n    \"REST API\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Esperaba más 2\",\r\n  \"stars\": 5,\r\n  \"comment\": \"Nisi officia fugiat id nulla laboris ex. Sit laboris culpa occaecat occaecat aliquip dolor non excepteur reprehenderit.\",\r\n  \"username\": [{\"id\":\"marysmith\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/67c8bfe5784013527700186e/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"67c8bfe5784013527700186e",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Nest.js: A Progressive Node.js Framework (English Edition)\",\r\n  \"genre\": \"Web Development\",\r\n  \"description\": \"JavaScript frameworks go in and out of style very quickly as web technologies change and grow. Nest.js is a good starting point for many developers that are looking to use a modern web framework because it uses a language that is very similar to that of the most used language on the web to this day, JavaScript...\",\r\n  \"author\": \"Jay Bell\",\r\n  \"pages\": 350,\r\n  \"image_url\": \"https://m.media-amazon.com/images/I/41fveBeDWmL._SY346_.jpg\",\r\n  \"keywords\": [\r\n    \"NestJS\",\r\n    \"REST API\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/67c8d07c86c0d441258ac1ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"67c8d07c86c0d441258ac1ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeAllComments",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Nest.js: A Progressive Node.js Framework (English Edition)\",\r\n  \"genre\": \"Web Development\",\r\n  \"description\": \"JavaScript frameworks go in and out of style very quickly as web technologies change and grow. Nest.js is a good starting point for many developers that are looking to use a modern web framework because it uses a language that is very similar to that of the most used language on the web to this day, JavaScript...\",\r\n  \"author\": \"Jay Bell\",\r\n  \"pages\": 350,\r\n  \"image_url\": \"https://m.media-amazon.com/images/I/41fveBeDWmL._SY346_.jpg\",\r\n  \"keywords\": [\r\n    \"NestJS\",\r\n    \"REST API\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/67c8d07c86c0d441258ac1ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"67c8d07c86c0d441258ac1ec"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
